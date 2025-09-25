@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/sreyasas95/linearmod/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/sreyasas95/linearmod/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Implements basic linear regression in R using linear algebra. Provides
