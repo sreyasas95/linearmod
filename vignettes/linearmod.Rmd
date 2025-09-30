@@ -1,0 +1,31 @@
+---
+title: "Using the linreg Package"
+author: "sreyas as"
+output: rmarkdown::html_document
+vignette: >
+  %\VignetteIndexEntry{Using linreg}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+# Introduction
+
+The `linreg` package provides a simple implementation of linear regression using QR decomposition. In this vignette, we will walk through an example of how to use the `linreg` function and the associated methods.
+
+# Example
+
+Let's start by fitting a linear regression model using the well-known `iris` dataset.
+
+```{r}
+# Load the necessary package
+library(linearmod)
+
+# Fit a linear regression model
+linreg_mod <- linreg(Petal.Length ~ Sepal.Width + Sepal.Length, data = iris)
+
+plot(linreg_mod)
+
+pred(linreg_mod)
+
+
+# View the summary
+summary(linreg_mod)

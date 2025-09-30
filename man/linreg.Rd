@@ -17,3 +17,11 @@ An object of class \code{linreg} containing model results.
 \description{
 Fits a linear regression model using QR decomposition.
 }
+\examples{
+data <- data.frame(
+  y = c(1.5, 2.3, 3.1, 4.8, 5.6),
+  x = c(1, 2, 3, 4, 5))
+# Fit linear regression with one predictor to avoid singularity error
+result <- linreg(y ~ x, data)
+print(result)
+}

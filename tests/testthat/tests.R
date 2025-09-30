@@ -16,7 +16,7 @@ test_that("class is correct", {
   expect_s3_class(linreg_mod, "linreg")
 })
 
-print.linreg <- function(x, ...) {
+  print.linreg <- function(x, ...) {
   cat("linreg(formula = ")
   cat(deparse(x$formula))
   cat(", data = iris)\n\n")
@@ -53,3 +53,4 @@ test_that("summary() works", {
   expect_output(summary(linreg_mod), "Sepal.Length( )*1.7[0-9]*( )*0.0[0-9]*( )*27.5[0-9]*( )*.*( )*\\*\\*\\*")
   expect_output(summary(linreg_mod), "Residual standard error: 0.6[0-9]* on 147 degrees of freedom")
 })
+
